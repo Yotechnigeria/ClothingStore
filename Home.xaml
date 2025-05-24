@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    xmlns:local="clr-namespace:BlacqHubAdmin"
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BlacqHubAdmin.Home"
+    BackgroundColor="Black">
+    <StackLayout>
+        <ListView
+            x:Name="Products_Listview">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout>
+                            <Image
+                                Source="{Binding Product_Image}"
+                                HeightRequest="24" />
+                            <Label
+                                Text="{Binding Product_Name}"
+                                FontSize="18"
+                                TextColor="White" />
+                            <Label
+                                Text="{Binding Season}"
+                                FontSize="14"
+                                TextColor="White" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Text="{Binding Cost}"
+                            FontSize="14"
+                            TextColor="Gold" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ImageButton
+            x:Name="Product_Image_Image_Button"
+            Source="{Binding Product_Image}"
+            BackgroundColor="Gold" />
+        <VerticalStackLayout>
+            <Entry
+                x:Name="Product_name_entry"
+                Placeholder="Product"
+                PlaceholderColor="Gold"
+                TextColor="Gold" />
+            <Entry
+                x:Name="Season_entry"
+                Placeholder="Season"
+                PlaceholderColor="Gold"
+                TextColor="Gold" />
+            <Entry
+                x:Name="Sizes_Available_entry"
+                Placeholder="Sizes"
+                PlaceholderColor="Gold"
+                TextColor="Gold" />
+            <Entry
+                x:Name="Product_colors_entry"
+                Placeholder="Colors"
+                PlaceholderColor="Gold"
+                TextColor="Gold" />
+            <Entry
+                x:Name="Inventry_available_entry"
+                Placeholder="Total Inventry of This Product"
+                PlaceholderColor="Gold"
+                TextColor="Gold" />
+            <Entry
+                x:Name="Cost_entry"
+                Placeholder="Cost of Product"
+                PlaceholderColor="Gold"
+                TextColor="Gold" />
+            <Button
+                x:Name="Done_Button"
+                Text="DONE BUTTON"
+                FontSize="20"
+                TextColor="White"
+                BackgroundColor="Gold" />
+        </VerticalStackLayout>
+    </StackLayout>
+</ContentPage>
